@@ -34,6 +34,6 @@
 
 - [Connexion / Inscrition / Cookies](readme_docs/documentations/connexion.md)
 
-> #### Eléments non géré par le site
+> #### Eléments non gérés par le site
 
 - [Liste](readme_docs/documentations/liste.md)
