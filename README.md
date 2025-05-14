@@ -32,8 +32,8 @@
 
 > #### Système de connexion
 
-- [Connexion / Inscrition / Cookies]()
+- [Connexion / Inscrition / Cookies](readme_docs/documentations/connexion.md)
 
 > #### Eléments non géré par le site
 
-- [Liste]()
+- [Liste](readme_docs/documentations/liste.md)
