@@ -1,10 +1,6 @@
 # **Structure du projet**
 
-**Menu principal : [revenir à l'accueil](/readme.md)**
-
-# **Structure du site web**
-
-**Menu principal : [revenir à l'accueil](/readme.md)**
+**Menu principal : [revenir à l'accueil](../../README.md)**
 
 ## _**Architecture MVC (Model-View-Controller)**_
 

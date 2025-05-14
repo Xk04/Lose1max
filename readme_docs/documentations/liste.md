@@ -1,6 +1,6 @@
 # Eléments non géré par le site
 
-**Menu principal : [revenir à l'accueil](/readme.md)**
+**Menu principal : [revenir à l'accueil](../../README.md)**
 
 ## 📋 **Liste des éléments à finir**
 

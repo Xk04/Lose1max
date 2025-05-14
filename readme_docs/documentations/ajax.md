@@ -1,6 +1,6 @@
 # Backend
 
-**Menu principal : [revenir à l'accueil](/readme.md)**
+**Menu principal : [revenir à l'accueil](../../README.md)**
 
 ## 📋 **Gestion des requêtes AJAX**
 

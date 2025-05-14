@@ -1,6 +1,6 @@
 #  **Add Match**
 
-**Menu principal : [Revenir à l’accueil](./README.md)**
+**Menu principal : [Revenir à l’accueil](../../README.md)**
 
 
 ## _**Fonctionnement**_

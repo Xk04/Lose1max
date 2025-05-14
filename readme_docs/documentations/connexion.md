@@ -1,6 +1,6 @@
 # Système de connexion
 
-**Menu principal : [revenir à l'accueil](/readme.md)**
+**Menu principal : [revenir à l'accueil](../../README.md)**
 
 ## 📋 **Connexion / Inscription / Cookies**
 
