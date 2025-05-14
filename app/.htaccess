@@ -1,0 +1,10 @@
+# Bloquer l'accès à tout le répertoire app
+<Directory "/app">
+    Order Deny,Allow
+    Deny from all
+</Directory>
+
+# Bloquer directement l'accès aux fichiers .php dans le répertoire
+<FilesMatch "\.php$">
+    Deny from all
+</FilesMatch>

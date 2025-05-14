@@ -1,0 +1,55 @@
+    <script src="https://kit.fontawesome.com/36c5b19ffa.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header>
+        <p class="welcome">Bienvenue sur</p>
+        <h1>Lose<span>1</span>Max</h1>
+        <p>Tu penses être le meilleur, mais en fait t'es juste un loser</p>
+    </header>
+
+    <main>
+        <section id="connexion-pannel">
+            <h1>Inscription</h1>
+            <form action="index.php" method="post">
+                <input type="hidden" name="action" value="register">
+
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Adresse e-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="" name="username" placeholder="Nom d'utilisateur">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Mot de passe">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="check_password" placeholder="Confirmer le mot de passe">
+                    <i class="fa-solid fa-lock"></i>    
+                </div>
+
+                <label><input type="checkbox" name="terms"> J'accepte les conditions générales</label>
+
+                <button type="submit" class="login-btn">S'inscrire</button>
+                
+                <p>Déjà un compte ? <a href="index.php?page=login" class="login">Connexion</a></p>
+            </form>
+        </section>
+        <div id="errors">
+            <p id="formStatus"></p>
+        </div>
+    </main>
+
+    
+    <footer>
+        <a href="index.php?page=home">Revenir à l'accueil</a>
+    </footer>
+</body>
+
+</html>

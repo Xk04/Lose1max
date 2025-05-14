@@ -1,0 +1,272 @@
+/* ================= */
+/* |      MAIN     | */
+/* ================= */
+main a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.home {
+    color: #ff3b30;
+}
+
+/* ==================== */
+/* |      Semaine     | */
+/* ==================== */
+
+#affiche_semaine h2 {
+    font-family: "Bungee";
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+/* Cas basique */
+.l1, .cl {
+    background-color: #373737;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.l1 p, .cl p{
+    font-family: "Alatsi";
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 5px;
+}
+
+.equipes {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.equipes img {
+    width: 22%;
+}
+
+
+/* Match Ligue1 */
+.l1 {
+    border: 2px #085fff solid;
+    color: #085fff;
+    transition: 1s;
+}
+
+.l1:hover {
+    transition: 0.5s;
+    color: #ff7fde;
+    border: 2px #ff7fde solid;
+    background-color: #085fff;
+    box-shadow: 0 0 20px rgba(255, 127, 222, 0.5);
+}
+
+/* Match Champions League */
+.cl {
+    border: 2px #201e5f solid;
+    color: #5d2de6;
+    transition: 1s;
+}
+
+.cl:hover {
+    transition: 0.5s;
+    color: #5d2de6;
+    border: 2px #5d2de6 solid;
+    background-color: #201e5f;
+    box-shadow: 0 0 20px rgba(72, 67, 209, 0.5);
+    
+}
+
+/* ================= */
+/* |      NEWS     | */
+/* ================= */
+
+#news {
+    width: 80%;
+    height: 45rem;
+    margin-bottom: 10%;
+}
+
+#news h2{
+    font-family: "Bungee";
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+/* ============================== */
+/* |      NEWS - Actualités     | */
+/* ============================== */
+
+.corps_une {
+    padding: 5%;
+    height: auto;
+    background-color: #373737;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.corps_une:hover {
+    transition: 1s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.corps_une img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.corps_une h3 {
+    font-family: "Alatsi";
+    font-size: 2em;
+    color: #ffffff;
+    text-align: start;
+    font-weight: 400;
+}
+
+.corps_une p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
+    color: #ffffff;
+    text-align: start;
+    font-weight: lighter;
+}
+
+/* ============================== */
+/* |      NEWS - Classement     | */
+/* ============================== */
+
+.corps_classement {
+    background-color: #373737;
+    border-radius: 10px;
+    max-height: 40rem;
+    overflow-y: auto;
+    
+}
+
+.choix {
+    width: 80%;
+    background-color: #262624;
+    border-radius: 10px;
+}
+
+.choix button {
+    color: #ffffff;
+    font-family: "Alatsi";
+    font-size: 1.3em;
+}
+
+.choix button:hover {
+    cursor: pointer;
+}
+
+.button_l1 {
+    padding: 1% 15%;
+    background: #085fff;
+    border: 2px solid #ff7fde;
+    border-radius: 10px;
+    transition: background 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 127, 222, 0.5);
+}
+
+.button_cl {
+    padding: 1% 5%;
+    background: none;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+
+.button_l1.active {
+    box-shadow: 0 0 10px rgba(255, 127, 222, 0.5);
+}
+
+.button_cl.active {
+    box-shadow: 0 0 10px rgba(72, 67, 209, 0.5);
+}
+
+.corps_classement table {
+    font-family: "Alatsi";
+    font-size: 1.3em;
+}
+
+.corps_classement thead {
+    color: #000000;
+}
+
+.corps_classement td {
+    color: #ffffff;
+}
+
+
+/* ===================== */
+/* |      SPONSORS     | */
+/* ===================== */
+
+#sponsors {
+    margin-top: 5%;
+    padding: 0% 10%;
+    font-family: "Chunk Five";
+    font-size: 4em;
+    color: #ffffff;
+}
+
+#sponsors h1 span {
+    color: #ff3b30;
+}
+
+#sponsors img {
+    width: 40%;
+}
+
+
+/* ===================== */
+/* |      ARTICLES     | */
+/* ===================== */
+
+#articles {
+    width: 80%;
+    margin-top: 5%;
+    padding: 0% 10%;
+    color: #ffffff;
+}
+
+.actu {
+    padding: 2% 10% 2% 3%;
+    background-color: #373737;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.actu:hover {
+    transition: 1s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.actu img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+.actu h3 {
+    font-family: "Alatsi";
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.actu p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}

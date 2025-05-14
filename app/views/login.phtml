@@ -1,0 +1,40 @@
+    <script src="https://kit.fontawesome.com/36c5b19ffa.js" crossorigin="anonymous" defer></script>
+</head>
+
+<body>
+    <header>
+        <p class="welcome">Bienvenue sur</p>
+        <h1>Lose<span>1</span>Max</h1>
+        <p>Prépare ton intuition… et ton portefeuille.</hp>
+    </header>
+
+    <main>
+        <section id="connexion-pannel">
+            <h1>Connexion</h1>
+            <form action="index.php" method="post">
+                <input type="hidden" name="action" value="login">
+
+                <div class="input-box">
+                    <input type="username" name="username" placeholder="Nom d'utiliseur">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Mot de Passe">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                
+                <a href="" class="remember-forgot">Mot de passe oublié ?</a>
+
+                <button type="submit" class="login-btn">Se connecter</button>
+                
+                <p>Pas de compte ? <a href="index.php?page=register" class="register">Inscription</a></p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <a href="index.php?page=home">Revenir à l'accueil</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+</head>
+<body>
+    <header>
+        <h1>Lose<span>1</span>Max</h1>
+        <nav>
+            <a href="index.php?page=home" class="home">Accueil</a>
+            <a href="index.php?page=sportbettings" class="sportbettings">Paris Sportifs</a>
+            <a href="index.php?page=ligue1" class="ligue1">Ligue 1</a>
+            <a href="index.php?page=championsleague" class="championsleague">Champions League</a>
+        </nav>
+        <?php
+        $user_connected = $this->authenticated;
+
+        if (!$user_connected) {
+            echo('
+                <div>
+                    <a href="index.php?page=login" class="login">Se connecter</a>
+                    <a href="index.php?page=register" class="register">S\'inscrire</a>
+                </div>
+            ');
+        } else {
+            $username = $_COOKIE['username'];
+            $default_logo = strtoupper($username[0]). $username[1];
+            echo("
+                <div class=\"profil\">
+                    <a href=\"index.php?action=deconnexion\" class=\"deconnexion\">Déconnexion</a>
+                    <p class=\"user_logo\">$default_logo</p>
+                </div>
+            ");
+        }
+        echo PHP_EOL;
+        ?>
+    </header>

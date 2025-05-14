@@ -1,0 +1,151 @@
+    
+    <main>
+        <section id="affiche_semaine">
+            <h2>MATCH DE LA SEMAINE</h2>
+            <div id="zone_rencontres">
+            <?php
+            foreach($matchs_actuels as $m_a) {
+                $competition = strtolower($m_a['competition']);
+                $club1 = $m_a["equipe_dom"];
+                $logo_club1 = "public/images/clubs/" . $m_a["logo_dom"];
+                $club2 = $m_a["equipe_ext"];
+                $logo_club2 = "public/images/clubs/" . $m_a["logo_ext"];
+                $date = $this->conversion_date($m_a["Date_match"]);
+                $heure = new DateTime($m_a["Heure"]);
+                $heure = $heure->format("H:i");
+                echo (
+                    "
+                    <div class=\"$competition\">
+                        <div class=\"equipes\">
+                            <img src=\"$logo_club1\" alt=\"$club1\">
+                            <img src=\"$logo_club2\" alt=\"$club2\">
+                        </div>
+                        <div>
+                            <p>$date</p>
+                            <p>$heure</p>
+                        </div>
+                    </div>
+                    "
+                    );
+            }
+            echo PHP_EOL;
+            ?>
+            </div>
+        </section>
+        <section id="news">
+                <section id="une">
+                    <h2>ACTUALIT&Eacute;S</h2>
+                    <a href="index.php?page=article&num=<?php echo "$id_une"?>">
+                    <div class="corps_une">
+                        <?php 
+                        echo ("
+                                <img src=\"public/images/actualites/$url_image_une\" alt=\"Image à la Une\">
+                                <h3>$titre_une</h3>
+                                <p>$description_une</p>
+                                <div>
+                                    <p class=\"supplementaire\">📅 Date : $dateUne</p>
+                                    <p class=\"supplementaire\">✍️ Journaliste : $journaliste</p>
+                                </div>
+                            "); 
+                        ?>
+                        </div>
+                    </a>
+                </section>
+            
+            
+
+            <section id="classement">
+                <h2>CLASSEMENT</h2>
+                <div class="corps_classement">
+                    <div class="choix">
+                        <button class="button_l1">Ligue 1</button>
+                        <button class="button_cl">Champions League</button>
+                    </div>
+                    
+                    <table id="classement-container">
+                        <thead>
+                            <tr>
+                                <th class="column_pos">Pos</th>
+                                <th class="column_club">&Eacute;quipe</th>
+                                <th class="column_j">J</th>
+                                <th class="column_pts">Pts</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        foreach ($classement as $club) {
+                            $pos = $club["position"];
+                            $nom_club = $club["nom_equipe"];
+                            $journee = $club["joues"];
+                            $points = $club["points"];
+                            echo (
+                                "
+                                <tr>
+                                    <td class=\"column_pos\">$pos</td>
+                                    <td class=\"column_club\">$nom_club</td>
+                                    <td class=\"column_j\">$journee</td>
+                                    <td class=\"column_pts\">$points</td>
+                                </tr>
+                                "
+                                );
+                        }
+                        echo PHP_EOL;
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+
+        <div class="sponsorPanneau" id="sponsorPanneau">
+            <div class="sponsorLogo" id="sponsorLogo">
+                <img src="public/images/sponsors/BallePerdue_com.png" alt="BallePerdue_com" />
+                <img src="public/images/sponsors/ChuteDirect.png" alt=" ChuteDirect" />
+                <img src="public/images/sponsors/CruePari.png" alt="CruePari" />
+                <h1>Lose<span>1</span>Max</h1>
+                <img src="public/images/sponsors/FcPanzani.png" alt="FcPanzani" />
+                <img src="public/images/sponsors/StadeLavauto.png" alt="StadeLavauto" />
+                <img src="public/images/sponsors/TacleTardBis.png" alt="TacleTardBis" />
+                    
+                <!--Double pour boucle fluide-->
+                <img src="public/images/sponsors/BallePerdue_com.png" alt="BallePerdue_com" />
+                <img src="public/images/sponsors/ChuteDirect.png" alt=" ChuteDirect" />
+                <img src="public/images/sponsors/CruePari.png" alt="CruePari" />
+                <h1>Lose<span>1</span>Max</h1>
+                <img src="public/images/sponsors/FcPanzani.png" alt="FcPanzani" />
+                <img src="public/images/sponsors/StadeLavauto.png" alt="StadeLavauto" />
+                <img src="public/images/sponsors/TacleTardBis.png" alt="TacleTardBis" />
+            </div>
+        </div>
+
+        <div id="articles">
+            
+        <?php 
+        foreach($actulites as $actu) {
+            $id_article = $actu["id_article"];
+            $url_image_actu = $actu["url_image"];
+            $titre_actu = $actu["Titre"];
+            $description_actu = $actu["description"];
+            $date_actu = $this->conversion_date($actu["Date_publication"]);
+            $journaliste_actu = $actu["Prenom"] . " " . $actu["Nom"];
+            echo("
+                <a href=\"index.php?page=article&num=$id_article\">
+                    <div class=\"actu\">
+                        <img src=\"public/images/actualites/$url_image_actu\" alt=\"Image actualité\">
+                        <div>
+                            <h3>$titre_actu</h3>
+                            <p>$description_actu</p>
+                            <div class=\"info\">
+                                <p class=\"supplementaire\">📅 Date : $date_actu</p>
+                                <p class=\"supplementaire\">✍️ Journaliste : $journaliste_actu</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                "
+                );
+            }
+            echo PHP_EOL;
+            ?>
+        </div>
+    </main>

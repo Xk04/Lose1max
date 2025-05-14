@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="public/images/logo/favicon.ico">
+    <?php
+        echo"<title>$pageTitle</title>". PHP_EOL; 
+        /* === CSS === */
+        $n = count($css_list);
+        for ($i=0 ; $i<$n ; $i++) {
+            echo "\t<link rel=\"stylesheet\" href=\"" . ($css_list[$i]) . "\">" . PHP_EOL;
+        }
+
+        /* === JS === */
+        $n = count($js_list);
+        for ($i=0 ; $i<$n ; $i++) {
+            echo "\t<script src=\"" . ($js_list[$i]) . "\"></script>" . PHP_EOL;
+        }
+    ?>

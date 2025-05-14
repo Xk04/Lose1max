@@ -1,0 +1,36 @@
+.sponsorPanneau {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  /* padding: 0% 10%; */
+  /* background-color: #262624; */
+  background-color: none;
+  display: flex;
+  margin: 0;
+  align-items: center;
+}
+
+.sponsorLogo {
+  margin-top: 5%;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  /* will-change: transform; */
+}
+
+.sponsorLogo img {
+  height: 13rem;
+  /* object-fit: contain; */
+  /* flex-shrink: 0; */
+}
+
+.sponsorLogo h1 {
+  font-family: "Chunk Five";
+  font-size: 7em;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.sponsorLogo h1 span {
+  color: #ff3b30;
+}

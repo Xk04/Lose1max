@@ -1,0 +1,106 @@
+/* ================= */
+/* |      MAIN     | */
+/* ================= */
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-family: 'Bungee';
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+
+/* ================= */
+/* |      FORM     | */
+/* ================= */
+
+form {
+    background-color: #262624;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+
+/* ============================= */
+/* |      FORM - SELECTION     | */
+/* ============================= */
+
+.type_ligue {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+label {
+    text-align: start;
+    color: #ffffff;
+    font-family: "Alatsi";
+    font-size: 1.2em;
+}
+
+select, input {
+    padding: 1% 2%;
+    width: 80%;
+    font-size: 1em;
+    font-family: "Alatsi";
+    font-weight: 400;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: none;
+}
+
+form div, button {
+    width: 100%;
+    
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    padding: 2% 0%;
+    margin-top: 2rem;
+    background: linear-gradient(to right, #1e90ff, #ff3b8b);
+    font-family: "Alatsi";
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.result {
+    background-color: #333;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    word-break: break-word;
+    position: relative;
+}
+        
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}

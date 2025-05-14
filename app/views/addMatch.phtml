@@ -1,0 +1,93 @@
+    
+    <main>
+        <h2>Appliquer le score d'un match</h2>
+
+        <form action="index.php" method="POST">
+            <input type="hidden" name="action" value="addmatch">
+            <div class="type_ligue">
+                <div>
+                    <input type="radio" name="ligue" id="ligue1_radio" value="ligue1" checked>
+                    <label for="ligue1_radio">ligue 1</label>
+                </div>
+                <div>
+                    <input type="radio" name="ligue" id="champions_league_radio" value="champions_league">
+                    <label for="champions_league_radio">Champions League</label>
+                </div>
+                
+            </div>
+            <div>
+                <label>Équipe Domicile</label>
+                <select name="EquipeDom" required>
+                    <option value="none">-- Choisir l'équipe domicile --</option>
+                    <?php foreach ($equipes as $club): ?>
+                        <option value="<?= $club['id_equipe'] ?>"><?= $club['nom_equipe'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            
+            <div>
+                <label>Équipe Extérieur</label>
+                <select name="EquipeExt" required>
+                    <option value="none">-- Choisir l'équipe extérieure --</option>
+                    <?php foreach ($equipes as $club): ?>
+                        <?php var_dump($club) ?>
+                        <option value="<?= $club['id_equipe'] ?>"><?= $club['nom_equipe'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            
+            <div>
+                <label>Score Équipe Domicile</label>
+                <input type="number" name="Score1" required>
+            </div>
+            
+            <div>
+                <label>Score Équipe Extérieur</label>
+                <input type="number" name="Score2" required>
+            </div>
+            
+            <div>
+                <label>Date du match</label>
+                <input type="date" name="Date" required>
+            </div>
+            
+            <div>
+                <label>Heure du match</label>
+                <input type="time" name="Heure" required>
+            </div>
+            
+            <div>
+                <label>Journée</label>
+                <input type="number" name="Journee" required>
+            </div>
+
+            <button type="submit">Générer la requête</button>
+        </form>
+
+        <?php if (!empty($sql)): ?>
+            <div class="result" id="sqlCode">
+                <h2>Requête SQL générée :</h2>
+                <code><?= htmlspecialchars($sql) ?></code>
+                <!-- <button class="copy-btn" onclick="copySQL()">Copier</button> -->
+            </div>
+        <?php endif; ?>
+
+        <!-- <script>
+        function copySQL() {
+            var text = document.getElementById('sqlCode').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Requête SQL copiée !');
+            });
+        }
+        </script> -->
+        <script>
+            let date = document.querySelector("input[name='Date']");
+            let form = document.querySelector("form");
+
+            // Correction de l'événement 'submit' et de la fonction
+            form.addEventListener('submit', function(event) {
+                console.log(date.value);  // Affiche la valeur de la date
+            });
+        </script>
+
+</main>

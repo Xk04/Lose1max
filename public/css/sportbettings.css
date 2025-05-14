@@ -1,0 +1,373 @@
+/* =============== */
+/* |    MAIN     | */
+/* =============== */
+
+#erreur {
+  text-align: center;
+  color: #ff3b30;
+  font-size: 1.5em;
+  line-height: 0;
+  font-family: "Alatsi";
+}
+
+/* =============== */
+/* |    Haut     | */
+/* =============== */
+
+main {
+  width: 90%;
+  margin: 5%;
+}
+#haut {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ================ */
+/* |    ASIDE     | */
+/* ================ */
+
+aside {
+  width: 20%;
+  height: 80%;
+  padding: 1% 2% 2% 2%;
+  background-color: #262624;
+  border-radius: 10px;
+}
+
+aside h2 {
+  color: #ffffff;
+  font-family: "Bungee";
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 25px;
+}
+
+#choice div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+aside label {
+  color: #ffffff;
+  font-family: "Alatsi";
+  font-size: 1.2em;
+}
+
+/* ==================== */
+/* |    Big matchs     | */
+/* ==================== */
+
+#match {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  padding-bottom: 2%;
+}
+
+.big-matchs {
+  width: 90%;
+  color: #ffffff;
+  font-family: "Bungee";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1em;
+}
+
+#match h2 {
+  font-family: "Bungee";
+  color: #ffffff;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* ==================== */
+/* |    Big match     | */
+/* ==================== */
+
+.big-match {
+  width: 50%;
+  background-color: #262624;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.big-match img {
+  width: 100%;
+  height: 10rem;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.big-match .match-main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+
+.big-match .match-main .big-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-match .match-main img {
+  width: auto;
+  height: 5rem;
+}
+
+.big-match .match-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.match-footer button {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+}
+.big-match .match-footer button {
+  width: auto;
+  height: 3.5em;
+}
+
+/* ==================== */
+/* |    Small match   | */
+/* ==================== */
+
+.small-matchs {
+  width: 90%;
+  color: #ffffff;
+  font-family: "Bungee";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1%;
+  gap: 1em;
+}
+
+.small-match {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #262624;
+  height: auto;
+  padding: 1em;
+  padding: 3%;
+  gap: 0;
+}
+
+.small-match .ligne1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-match .ligne1 img {
+  width: 16em;
+  height: 11em;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 1.5em;
+  /* padding: 3%; */
+}
+
+.small-match .ligne1 .small-match-main img {
+  width: 5rem;
+  height: auto;
+}
+
+.small-match .ligne1 .small-match-main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.small-match .ligne1 .match-main img {
+  width: auto;
+  height: 10em;
+}
+
+.small-match .ligne1 .small-match-main .small-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-match .ligne1 .match-footer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7em;
+}
+
+.small-match .ligne1 .match-footer button {
+  width: auto;
+  height: 5em;
+  padding: 0.4em;
+  text-align: center;
+  word-wrap:normal;
+}
+
+/* =============== */
+/* |    Bouton   | */
+/* =============== */
+
+button {
+  font-family: 'Alatsi';
+}
+
+.button-l1 {
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #161616;
+  border-radius: 10px;
+  box-shadow: 0 3px #085fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.button-l1:hover {
+  background-color: #085fff;
+  box-shadow: 0 2px #ff7fde;
+  color: #ff7fde;
+}
+
+.button-l1:active {
+  box-shadow: 0 4px #ff7fde;
+  transform: translateY(1px);
+}
+
+.button-cl {
+  display: inline-block;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #5d2de6;
+  background-color: #161616;
+  border-radius: 10px;
+  box-shadow: 0 3px #5d2de6;
+  border: none;
+  transition: 0.3s;
+}
+
+.button-cl:hover {
+  background-color: #121033;
+  box-shadow: 0 5px #5d2de6;
+  color: #fff;
+}
+.button-cl:active {
+  box-shadow: 0 3px #5d2de6;
+  transform: translateY(2px);
+}
+
+.button-defaut {
+  display: inline-block;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #161616;
+  border-radius: 10px;
+  box-shadow: 0 3px #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.button-defaut:hover {
+  background-color: #ff3b30;
+}
+
+/* ==================== */
+/* | Barre pourcentage |*/
+/* ==================== */
+
+
+.barre-pourcentage  {
+  display: flex;
+  margin: 1% 0 2% 0;
+  height: 0.5em;
+  flex-direction: row;
+  justify-content: center;
+  transition: width 0.5s ease-in-out;
+}
+.big-match .barre-pourcentage {
+  margin-top: 2em;
+}
+.small-match .barre-pourcentage {
+  margin-top: 0;
+}
+
+.barre-pourcentage p {
+  color: #fff;
+  text-align: center;
+}
+
+.equipe1 {
+  background-color: #085fff;
+  text-align: center;
+}
+.nul {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+
+
+.equipe2 {
+  background-color: #ff3b30;
+  text-align: center;
+}
+
+.equipe1,
+.equipe2,
+.nul {
+    transition: width 0.5s ease-in-out;
+}
+
+.equipe1 span,
+.equipe2 span,
+.nul span {
+    transition: opacity 0.3s ease-in-out;
+}

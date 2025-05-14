@@ -1,0 +1,152 @@
+/* === POSITION === */
+
+/* =================== */
+/* |      Header     | */
+/* =================== */
+
+header {
+    margin: 2% 10% 0% 10%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* ========================= */
+/* |      Header - Nav     | */
+/* ========================= */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+
+/* ============================== */
+/* |      Header - Register     | */
+/* ============================== */
+
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+
+/* === STYLE === */
+
+/* =================== */
+/* |      Header     | */
+/* =================== */
+
+header {
+    background-color: #262624;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-family: "Chunk Five";
+    font-size: 4em;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+header h1 span {
+    color: #ff3b30;
+}
+
+
+/* ========================= */
+/* |      Header - Nav     | */
+/* ========================= */
+
+nav a {
+    transition-duration: 1s;
+    font-family: "Alatsi";
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.home:hover {
+    color: #ff3b30;
+    transition-duration: 0.5s;
+}
+
+.sportbettings:hover {
+    color: #fbb53d;
+    transition-duration: 0.5s;
+}
+
+.ligue1:hover {
+    color: #085fff;
+    transition-duration: 0.5s;
+}
+
+.championsleague:hover {
+    color: #5d2de6;
+    transition-duration: 0.5s;
+}
+
+
+/* ============================== */
+/* |      Header - Register     | */
+/* ============================== */
+
+.login {
+    padding: 10px 20px;
+    background-color: #161616;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: "Alatsi";
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.register {
+    padding: 10px 20px;
+    background-color: #ed1c24;
+    border-radius: 20px;
+    color: #ffffff;
+    font-family: "Alatsi";
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+/* =============================== */
+/* |      Header - Connected     | */
+/* =============================== */
+
+.deconnexion {
+    color: #ffffff;
+    font-family: "Alatsi";
+    font-size: 1em;
+    text-decoration: underline 1px #ffffff;
+    transition: 0.5s;
+}
+
+.deconnexion:hover {
+    transition: 0.5s;
+    color: #ff3b30;
+    text-decoration: underline 1px #ff3b30  ;
+}
+
+.user_logo {
+    padding: 8% 10%;
+    color: #ff3b30;
+    font-family: "Alatsi";
+    font-size: 1.2em;
+    font-weight: 200;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 20%;
+}

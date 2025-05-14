@@ -1,0 +1,233 @@
+/* ================= */
+/* |      BASE     | */
+/* ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #161616;
+}
+
+::selection {
+    background-color: #ff3b30;
+    color: #ffffff;
+}
+
+
+/* =================== */
+/* |      HEADER     | */
+/* =================== */
+
+header {
+    margin: 2% 0%;
+    padding: 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "Chunk Five";
+    font-size: 5em;
+    color: #ffffff;
+}
+
+header h1 span {
+    color: #ff3b30;
+}
+
+header p {
+    font-family: "Alatsi";
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.welcome {
+    font-size: 2em;
+}
+
+
+/* ====================== */
+/* |      Connexion     | */
+/* ====================== */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#connexion-pannel {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #262624;
+    border-radius: 30px;
+}
+
+#connexion-pannel h1 {
+    margin-top: 5%;
+    font-family: "Alatsi";
+    font-size: 3em;
+    color: #ffffff;
+}
+
+
+/* =================================== */
+/* |      Connexion - Formulaire     | */
+/* =================================== */
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    padding: 5% 10%;
+}
+
+
+/* === INPUTS === */
+.input-box {
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #161616;
+    border-radius: 5px;
+}
+
+.input-box input {
+    width: 90%;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-family: "Alatsi";
+    font-size: 1.5em;
+}
+
+.input-box input:focus {
+    outline: none;
+    background: none;
+}
+
+.input-box input:active {
+    outline: none;
+    background: none;
+}
+
+.input-box input::placeholder {
+    color: #a6a6a6;
+}
+
+.input-box i {
+    align-content: center;
+    color: #ffffff;
+}
+
+
+/* === General terms === */
+label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: "Alatsi";
+    font-size: 1.1em;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #ff3b30;
+    cursor: pointer;
+}
+
+/* === Submit button === */
+.login-btn {
+    width: 100%;
+    padding: 3% 0%;
+    font-family: "Alatsi";
+    font-size: 1.2em;
+    color: #000000;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-btn:hover {
+    transition: 0.5s;
+    background-color: #ff3b30;
+    color: white;
+}
+
+
+/* === Get registered === */
+form p, .login {
+    font-family: "Alatsi";
+    font-size: 1em;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.login:hover {
+    color: #ff3b30;
+}
+
+
+/* =================== */
+/* |      Errors     | */
+/* =================== */
+
+#errors {
+    margin-top: 2%;
+    text-align: center;
+}
+
+#formStatus {
+    font-size: 1.2em;
+    font-family: "Alatsi";
+    color: #ff3b30;
+}
+
+
+/* =================== */
+/* |      FOOTER     | */
+/* =================== */
+
+footer a {
+    padding: 0.5% 1%;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    font-family: "Alatsi";
+    font-size: 1em;
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    transition: 0.5s;
+    background-color: #ff3b30;
+    color: white;
+}

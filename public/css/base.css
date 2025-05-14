@@ -1,0 +1,19 @@
+/* ================= */
+/* |      Body     | */
+/* ================= */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #161616;
+}
+
+::selection {
+    background-color: #ff3b30;
+    color: #ffffff;
+}

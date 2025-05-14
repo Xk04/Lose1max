@@ -1,0 +1,164 @@
+
+    <main>
+        <p id="erreur"></p>
+        <div id="haut">
+            <aside>
+                <h2>Parier sur une ligue</h2>
+                <div id="choice">
+                    <div>
+                        <input type="radio" id="ligue1" name="ligue" value="ligue1" checked>
+                        <label for="ligue1">Ligue 1</label>
+                    </div>
+
+                    <div>
+                        <input type="radio" id="champions_league" name="ligue" value="champions_league">
+                        <label for="champions_league">Champions League</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section id="match">
+                
+            <?php 
+                echo ("     <div class=\"big-matchs\">");
+                for ($i=0 ; $i <2 ; $i++) {
+                    $match_id = $match_l1[$i]['match_id'];
+                    $stadeDom = $match_l1[$i]['Stade'];
+
+                    $e1 = $match_l1[$i]['equipe_dom'];
+                    $url_e1 = $match_l1[$i]['logo_dom'];
+
+                    $e2 = $match_l1[$i]['equipe_ext'];
+                    $url_e2 = $match_l1[$i]['logo_ext'];
+
+                    $date = $this->conversion_date($match_l1[$i]['Date_match']);
+                    $heure = new DateTime($match_l1[$i]["Heure"]);
+                    $heure = $heure->format("H:i");
+
+                    $stats = $this->returnStats($match_id);
+                    $stats = $stats[0];
+                    $p_e1 = $stats["p_e1"] ?? 0;
+                    $p_e2 = $stats["p_e2"] ?? 0;
+                    $total_votes = $stats["total_votes"] ?? 0;
+
+
+                    if ($total_votes == 0){
+                        $pourcent_e1 = 33;
+                        $pourcent_e2 = 33;
+                        $pourcent_N = 100 - $pourcent_e1 - $pourcent_e2;
+                    } else {
+                        $pourcent_e1 = intval($p_e1 / $total_votes * 100);
+                        $pourcent_e2 = intval($p_e2 / $total_votes * 100);
+                        $pourcent_N = 100 - $pourcent_e1 - $pourcent_e2;
+
+                    }
+                    echo ("
+                    <div class=\"big-match\" data-id_match=\"$match_id\">
+                        <img class=\"head-img\" src=\"public/images/stades/$stadeDom\" alt=\"stade\"/>
+                        <div class=\"match-main\">
+                            <img src=\"public/images/clubs/$url_e1\" alt=\"$e1\" />
+                            <div class=\"big-date\">
+                                <p>$date</p>
+                                <p>$heure</p>
+                            </div>
+                            <img src=\"public/images/clubs/$url_e2\" alt=\"$e2\" />
+                        </div>
+                        <div class=\"match-footer\">
+                            <button class=\"button-l1\" id=\"btn-e1\">$e1</button>
+                            <button class=\"button-l1\" id=\"btn-nul\">Nul</button>
+                            <button class=\"button-l1\" id=\"btn-e2\">$e2</button>
+                        </div>
+                        <div class=\"barre-pourcentage\">
+                            <div class=\"equipe1\">
+                                <p><span>$pourcent_e1</span>%</p>
+                            </div>
+                            <div class=\"nul\">
+                                <p><span>$pourcent_N</span>%</p>
+                            </div>
+                            <div class=\"equipe2\">
+                                <p><span>$pourcent_e2</span>%</p>
+                            </div>
+                        </div>
+                    </div>
+            ");
+            }
+            echo "
+                </div>
+                <div class=\"small-matchs\">
+            ";
+            
+                for ($i=2 ; $i < count($match_l1) ; $i++) {
+                    $match_id = $match_l1[$i]['match_id'];
+
+                    $stadeDom = $match_l1[$i]['Stade'];
+
+                    $e1 = $match_l1[$i]['equipe_dom'];
+                    $url_e1 = $match_l1[$i]['logo_dom'];
+
+                    $e2 = $match_l1[$i]['equipe_ext'];
+                    $url_e2 = $match_l1[$i]['logo_ext'];
+
+                    $date = $this->conversion_date($match_l1[$i]['Date_match']);
+                    $heure = new DateTime($match_l1[$i]["Heure"]);
+                    $heure = $heure->format("H:i");
+
+                    $stats = $this->returnStats($match_id);
+                    $stats = $stats[0];
+                    $p_e1 = $stats["p_e1"] ?? 0;
+                    $p_e2 = $stats["p_e2"] ?? 0;
+                    $total_votes = $stats["total_votes"] ?? 0;
+
+                    if ($total_votes == 0){
+                        $pourcent_e1 = 33;
+                        $pourcent_e2 = 33;
+                        $pourcent_N = 100 - $pourcent_e1 - $pourcent_e2;
+                    } else {
+                        $pourcent_e1 = intval($p_e1 / $total_votes * 100);
+                        $pourcent_e2 = intval($p_e2 / $total_votes * 100);
+                        $pourcent_N = 100 - $pourcent_e1 - $pourcent_e2;
+                    }
+                    echo ("
+                    <div class=\"small-match\" data-id_match=\"$match_id\">
+                        <div class=\"ligne1\">
+                            <img class=\"head-img\" src=\"public/images/stades/$stadeDom\" alt=\"Monaco\" />
+
+                            <div class=\"small-match-main\">
+                                <img src=\"public/images/clubs/$url_e1\" alt=\"$e1\" />
+                                <div class=\"small-date\">
+                                    <p>$date</p>
+                                    <p>$heure</p>
+                                </div>
+                                <img src=\"public/images/clubs/$url_e2\" alt=\"$e2\" />
+                            </div>
+
+                            <div class=\"match-footer\">
+                                <button class=\"button-l1\">$e1</button>
+                                <button class=\"button-l1\">Nul</button>
+                                <button class=\"button-l1\">$e2</button>
+                            </div>
+                        </div>
+
+                        <div class=\"barre-pourcentage\">
+                            <div class=\"equipe1\">
+                                <p><span>$pourcent_e1</span>%</p>
+                            </div>
+                            <div class=\"nul\">
+                                <p><span>$pourcent_N</span>%</p>
+                            </div>
+                            <div class=\"equipe2\">
+                                <p><span>$pourcent_e2</span>%</p>
+                            </div>
+                        </div>
+                    </div>
+                    ");
+                }
+            echo "
+                </div>
+                ";
+            echo PHP_EOL;
+            ?>
+            </div>
+
+            </section>
+        </div>
+    </main>

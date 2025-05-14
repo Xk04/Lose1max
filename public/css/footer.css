@@ -1,0 +1,215 @@
+/* === POSITION === */
+
+/* =================== */
+/* |      FOOTER     | */
+/* =================== */
+
+footer {
+    margin: 7% 0% 0% 0%;
+    bottom: 0;
+}
+
+.entete_haut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/* ========================= */
+/* |      FOOTER - HEAD    | */
+/* ========================= */
+
+.head {
+    width: 88%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+
+
+/* ================================= */
+/* |      FOOTER - SOCIAL MEDIA    | */
+/* ================================= */
+
+.social_media {
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* ============================ */
+/* |      FOOTER - Bandeau    | */
+/* ============================ */
+
+#bandeau {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin-bottom: 2rem;
+}
+
+#bandeau h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.partenaires {
+    width : 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.ethique {
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.ethique p {
+    font-family: "Alice";
+    font-size: 1em;
+    color: #ffffff;
+}
+
+.ethique a {
+    text-decoration: none;
+    color: #ff3b30;
+    font-weight:600;
+}
+
+.texte-ethique {
+    font-family: "Alice";
+    font-size: 1em;
+    color: #ffffff;
+    text-align: center;
+    width: 80%;
+}
+
+
+/* === STYLE === */
+
+/* =================== */
+/* |      FOOTER     | */
+/* =================== */
+
+footer {
+    padding: 2% 5% 0.25% 5%;
+    background-color: #262624;
+}
+
+
+/* ========================= */
+/* |      FOOTER - HEAD    | */
+/* ========================= */
+
+.head {
+    line-height: 0%;
+}
+
+.head h1 {
+    font-family: "Chunk Five";
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.head h1 span {
+    color: #ff3b30;
+}
+
+.head p {
+    font-family: "Chunk Five";
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+
+/* ================================= */
+/* |      FOOTER - SOCIAL MEDIA    | */
+/* ================================= */
+
+img[alt="instagram"] {
+    width: 35%;
+    height: 35%;
+}
+
+img[alt="x"] {
+    width: 25%;
+    height: 25%;
+    border-radius: 90px;
+}
+img[alt="facebook"] {
+    width: 25%;
+    height: 25%;
+    border-radius: 90px;
+}
+
+/* ====================== */
+/* |      FOOTER - P    | */
+/* ====================== */
+
+.etudes {
+    font-family: "Alice";
+    font-size: 1em;
+    color: #ffffff;
+}
+
+
+/* =============================== */
+/* |      FOOTER - Seapration    | */
+/* =============================== */
+
+#separation {
+    width: auto;
+    height: 5px;
+    background-color: #373737;
+}
+
+
+/* ============================ */
+/* |      FOOTER - Bandeau    | */
+/* ============================ */
+
+#bandeau {
+    font-family: "Alatsi";
+    color: #ffffff;
+}
+
+.partenaires img {
+    width: 30%;
+}
+
+
+
+/* ============================ */
+/* |      FOOTER - Fin        | */
+/* ============================ */
+
+.footer-fin {
+    font-family: "Alatsi";
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+}

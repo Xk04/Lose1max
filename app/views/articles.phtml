@@ -1,0 +1,67 @@
+<main>
+    <div id="lecture">
+        <div class="contenu-lecture">
+        <?php
+        echo("
+            <img src=\"$image\" alt=\"Image actualité\">
+            <h2>$titre</h2>
+            <p>$contenu</p>
+            <div>
+                <p class=\"supplementaire\">📅 Date : $date_actu</p>
+                <p class=\"supplementaire\">✍️ Journaliste : $journaliste_actu</p>
+            </div>
+        ");
+        ?>
+        </div>
+    </div>
+    <div class="sponsorPanneau" id="sponsorPanneau">
+            <div class="sponsorLogo" id="sponsorLogo">
+                <img src="public/images/sponsors/BallePerdue_com.png" alt="BallePerdue_com" />
+                <img src="public/images/sponsors/ChuteDirect.png" alt=" ChuteDirect" />
+                <img src="public/images/sponsors/CruePari.png" alt="CruePari" />
+                <h1>Lose<span>1</span>Max</h1>
+                <img src="public/images/sponsors/FcPanzani.png" alt="FcPanzani" />
+                <img src="public/images/sponsors/StadeLavauto.png" alt="StadeLavauto" />
+                <img src="public/images/sponsors/TacleTardBis.png" alt="TacleTardBis" />
+                    
+                <!--Double pour boucle fluide-->
+                <img src="public/images/sponsors/BallePerdue_com.png" alt="BallePerdue_com" />
+                <img src="public/images/sponsors/ChuteDirect.png" alt=" ChuteDirect" />
+                <img src="public/images/sponsors/CruePari.png" alt="CruePari" />
+                <h1>Lose<span>1</span>Max</h1>
+                <img src="public/images/sponsors/FcPanzani.png" alt="FcPanzani" />
+                <img src="public/images/sponsors/StadeLavauto.png" alt="StadeLavauto" />
+                <img src="public/images/sponsors/TacleTardBis.png" alt="TacleTardBis" />
+            </div>
+        </div>
+
+        <div id="articles">
+        <?php 
+        foreach($suite_articles as $actu) {
+            $id_article = $actu["id_article"];
+            $url_image_actu = $actu["url_image"];
+            $titre_actu = $actu["Titre"];
+            $description_actu = $actu["description"];
+            $date_actu = $this->conversion_date($actu["Date_publication"]);
+            $journaliste_actu = $actu["Prenom"] . " " . $actu["Nom"];
+            echo("
+                <a href=\"index.php?page=article&num=$id_article\">
+                    <div class=\"actu\">
+                        <img src=\"public/images/actualites/$url_image_actu\" alt=\"Image actualité\">
+                        <div>
+                            <h3>$titre_actu</h3>
+                            <p>$description_actu</p>
+                            <div class=\"info\">
+                                <p class=\"supplementaire\">📅 Date : $date_actu</p>
+                                <p class=\"supplementaire\">✍️ Journaliste : $journaliste_actu</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                "
+                );
+            }
+            echo PHP_EOL;
+            ?>
+        </div>
+</main>

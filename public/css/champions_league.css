@@ -1,0 +1,251 @@
+/* ================= */
+/* |      MAIN     | */
+/* ================= */
+.championsleague {
+    color: #5d2de6;
+}
+
+.championsleague:hover {
+    color: #ffffff;
+}
+
+/* ======================= */
+/* |      Calendrier     | */
+/* ======================= */
+
+#calendrier {
+    margin: 5% 10% 0% 10%;
+}
+
+#calendrier h2 {
+    font-family: "Bungee";
+    color: #ffffff;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: 400;
+}
+
+.corps_calendrier, .container_calendrier {
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0px;
+    row-gap: 50px;
+    border-radius: 10px;
+}
+
+/* ================================ */
+/* |      Calendrier - Matchs     | */
+/* ================================ */
+
+.match {
+    transition: 1s;
+    padding: 0% 2%;
+    width: 40rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #373737;
+    border-radius: 10px;
+    color: #ffffff;
+    border: 2px solid #5d2de6;
+}
+
+.match p {
+    font-family: "Alatsi";
+    font-size: 1.3em;
+}
+
+.versus {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.match img {
+    width: 25%;
+}
+
+.info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rdv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0px;
+}
+
+
+/* ================================= */
+/* |      Calendrier - Boutons     | */
+/* ================================= */
+
+.select_week {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.select_week p {
+    color: #ffffff;
+    font-family: "Alatsi";
+    font-size: 1.3em;
+}
+
+.select_week button {
+    transition: 0.5s;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: "Alatsi";
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.select_week button:hover {
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #ff3b30;
+    color: white;
+}
+
+
+/* ======================= */
+/* |      Classement     | */
+/* ======================= */
+
+#section_classement h2 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    font-family: 'Bungee';
+}
+
+#classement {
+    font-family: 'Alatsi', sans-serif;
+    background-color: #373737;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    max-width: 1200px;
+    overflow-x: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.cl_logo {
+    width: 10%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+
+/* ================================ */
+/* |     Classement - tableau     | */
+/* ================================ */
+
+#classement table {
+    width: 100%;
+    text-align: center;
+}
+
+#classement table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2em;
+}
+
+#classement thead th {
+    background-color: #201e5f;
+    color: #ffffff;
+    padding: 10px;
+    border: 1px solid #5d2de6;
+    font-family: 'Bungee';
+    font-weight: 400;
+}
+
+#classement tbody td {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #262624;
+}
+
+/* 1 ligne sur 2 colorée différemment */
+#classement tbody tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+#classement tbody tr:hover {
+    background-color: #5d2de6;
+    color: #ffffff;
+}
+
+
+/* ======================================= */
+/* |     Classement - Qualifications     | */
+/* ======================================= */
+
+.qualif-direct {
+    background: linear-gradient(90deg, #201e5f, #5d2de6);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.qualif-barrage {
+    background: linear-gradient(90deg, #3e2a84, #7b57e5);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+/* ================================ */
+/* |     Classement - légende     | */
+/* ================================ */
+
+.legende-classement {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Alatsi';
+}
+
+.legende-classement p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.legende-classement .legende {
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#asterisk  {
+    font-size: 0.9em;
+}

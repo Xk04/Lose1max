@@ -1,0 +1,116 @@
+/* ==================== */
+/* |      Semaine     | */
+/* ==================== */
+
+#affiche_semaine h2 {
+    text-align: center;
+    margin: 7% 0% 2% 0%;
+}
+
+#zone_rencontres {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* ================= */
+/* |      NEWS     | */
+/* ================= */
+
+#news {  
+    margin: 7% 10% 0% 10%;
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 30px;
+    grid-auto-flow: row;
+}
+  
+#news h2 {
+    text-align: center;
+}
+
+.corps_une div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* ============================== */
+/* |      NEWS - Classement     | */
+/* ============================== */
+
+.corps_classement {
+    padding: 8.5% 5% 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.corps_classement table {
+    width: 100%;
+    margin-top: 5%;
+    border-collapse: collapse;
+}
+
+.column_club {
+    width: 70%;
+    text-align: start;
+}
+
+.column_pos, .column_j, .column_pts {
+    width: 10%;
+    text-align: start;
+}
+
+
+/* ===================== */
+/* |      SPONSORS     | */
+/* ===================== */
+
+#sponsors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===================== */
+/* |      ARTICLES     | */
+/* ===================== */
+
+#articles {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.actu {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
