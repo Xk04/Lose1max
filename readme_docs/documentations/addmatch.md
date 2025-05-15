@@ -5,7 +5,7 @@
 
 ## _**Fonctionnement**_
 
-La page addmatchs permet d’actualiser les scores des matchs dans la base de données, soit pour la **Ligue 1** (L1), soit pour la **Champions League** (CL).  
+La page addmatch permet d’actualiser les scores des matchs dans la base de données, soit pour la **Ligue 1** (L1), soit pour la **Champions League** (CL).  
 Cette fonctionnalité est réservée à l'**administrateur** (root) .
 
 
